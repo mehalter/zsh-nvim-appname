@@ -1,0 +1,10 @@
+#compdef nvapp
+
+local all_nvim=()
+while ifs= read -r line; do
+  all_nvim+=("$line")
+done <<< "$(find ${XDG_CONFIG_HOME:-$HOME/.config} -maxdepth 1 -name 'nvim_*' -exec sh -c 'basename {} | cut -d"_" -f2' \;)"
+
+_arguments \
+  "1: :(${all_nvim})" \
+  "*: :_files"

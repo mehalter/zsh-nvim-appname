@@ -6,5 +6,8 @@ while ifs= read -r line; do
 done <<< "$(find ${XDG_CONFIG_HOME:-$HOME/.config} -maxdepth 1 -name 'nvim_*' -exec sh -c 'basename {} | cut -d"_" -f2' \;)"
 
 _arguments \
+  "(-h --help)"{-h,--help}"[Show command line options]" \
+  "(-c --clean)"{-c,--clean}"[Clean the installation files]" \
+  "(-d --delete)"{-d,--delete}"[Delete the configuration directory]" \
   "1: :(${all_nvim})" \
   "*: :_files"

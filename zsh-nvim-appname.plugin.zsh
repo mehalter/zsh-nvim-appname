@@ -1,11 +1,16 @@
 nvapp() {
   zparseopts -D -E -F - h=help -help=help c=clean -clean=clean d=delete -delete=delete || return 1
   if [ ! -z "${help}" ]; then
-    echo "Usage: nvapp [-h|--help] [-c|--clean] [-d|--delete] [<nvapp_name>]...
+    echo "Usage:
+  nvapp [-h|--help] [-c|--clean] [-d|--delete] <nvapp_name> ...
 
-        -h|--help     Display this help text and exit
-        -c|--clean    Clean the installation files
-        -d|--delete   Delete the configuration directory"
+Options:
+  -h|--help     Display this help text and exit
+  -c|--clean    Clean the installation files
+  -d|--delete   Delete the configuration directory
+  <appname>     The name fo the neovim app in \$XDG_CONFIG_HOME
+                (Example. ~/.config/nvim_<appname>)
+  ...           any arguments passed to neovim"
     return 0
   fi
   if [ $# -eq 0 ]; then; echo "Must pass neovim appname" && return 1; fi

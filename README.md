@@ -10,27 +10,30 @@ This creates a new command `nvapp` which takes an `appname` of a folder `named n
 
 ```
 Usage:
-  nvapp <appname> ...
+  nvapp [-h|--help] [-c|--clean] [-d|--delete] <nvapp_name> ...
 
 Options:
-  <appname>  the name of the app in $XDG_CONFIG_HOME
-             (Example. ~/.config/nvim_<appname>)
-  ...        any arguments passed to Neovim
+  -h|--help     Display this help text and exit
+  -c|--clean    Clean the installation files
+  -d|--delete   Delete the configuration directory
+  <appname>     The name fo the neovim app in \$XDG_CONFIG_HOME
+                (Example. ~/.config/nvim_<appname>)
+  ...           any arguments passed to neovim
 ```
 
 ## Installation
 
-* [Antigen](#antigen)
-* [Oh My Zsh](#oh-my-zsh)
-* [Manual](#manual-git-clone)
+- [Antigen](#antigen)
+- [Oh My Zsh](#oh-my-zsh)
+- [Manual](#manual-git-clone)
 
 ### Antigen
 
 1. Add the following to your `.zshrc`:
 
-    ```sh
-    antigen bundle mehalter/zsh-nvim-appname
-    ```
+   ```sh
+   antigen bundle mehalter/zsh-nvim-appname
+   ```
 
 2. Start a new terminal session.
 
@@ -38,18 +41,18 @@ Options:
 
 1. Clone this repository into `$ZSH_CUSTOM/plugins` (by default `~/.oh-my-zsh/custom/plugins`)
 
-    ```sh
-    git clone https://github.com/mehalter/zsh-nvim-appname ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-nvim-appname
-    ```
+   ```sh
+   git clone https://github.com/mehalter/zsh-nvim-appname ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-nvim-appname
+   ```
 
 2. Add the plugin to the list of plugins for Oh My Zsh to load (inside `~/.zshrc`):
 
-    ```sh
-    plugins=( 
-        # other plugins...
-        zsh-nvim-appname
-    )
-    ```
+   ```sh
+   plugins=(
+       # other plugins...
+       zsh-nvim-appname
+   )
+   ```
 
 3. Start a new terminal session.
 
@@ -57,16 +60,15 @@ Options:
 
 1. Clone this repository somewhere on your machine. This guide will assume `~/.zsh/zsh-autosuggestions`.
 
-    ```sh
-    git clone https://github.com/mehalter/zsh-nvim-appname ~/.zsh/zsh-nvim-appname
-    ```
+   ```sh
+   git clone https://github.com/mehalter/zsh-nvim-appname ~/.zsh/zsh-nvim-appname
+   ```
 
 2. Add the following to your `.zshrc`:
 
-    ```sh
-    source ~/.zsh/zsh-nvim-appname/zsh-nvim-appname.plugin.zsh
-    fpath+= ~/.zsh/zsh-nvim-appname
-    ```
+   ```sh
+   source ~/.zsh/zsh-nvim-appname/zsh-nvim-appname.plugin.zsh
+   fpath+= ~/.zsh/zsh-nvim-appname
+   ```
 
 3. Start a new terminal session.
-

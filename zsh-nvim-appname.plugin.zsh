@@ -1,5 +1,5 @@
 nvapp() {
-  zparseopts -D -E -F - h=help -help=help c=clean -clean=clean d=delete -delete=delete || return 1
+  zparseopts -D -F - h=help -help=help c=clean -clean=clean d=delete -delete=delete || return 1
   if [ ! -z "${help}" ]; then
     echo "Usage:
   nvapp [-h|--help] [-c|--clean] [-d|--delete] <nvapp_name> ...

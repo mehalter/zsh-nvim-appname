@@ -1,8 +1,12 @@
 # zsh-nvim-appname
 
-A simple ZSH plugin for maintaining multiple Neovim configurations with `NVIM_APPNAME`
+A simple ZSH plugin for maintaining multiple Neovim configurations with `NVIM_APPNAME` with full tab completion of available flags, available neovim applications, and neovim arguments/flags.
 
 Requirements: Neovim v0.9+
+
+## Short Demo
+
+[![Recorded Demo](https://asciinema.org/a/mdy5Cv1q79vOwjdQJauHv1NNn.svg)](https://asciinema.org/a/mdy5Cv1q79vOwjdQJauHv1NNn)
 
 ## Usage
 

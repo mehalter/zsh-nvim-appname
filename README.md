@@ -19,7 +19,7 @@ Usage:
 Options:
   -h|--help     Display this help text and exit
   -c|--clean    Clean the installation files
-  -d|--delete   Delete the configuration directory
+  -d|--delete   Fully delete the neovim app
   <appname>     The name of the neovim app in $XDG_CONFIG_HOME
                 (Example. ~/.config/nvim_<appname>)
   ...           any arguments passed to neovim
